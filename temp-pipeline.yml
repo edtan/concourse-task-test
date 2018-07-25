@@ -2,7 +2,7 @@ resources:
 - name: repo
   type: git
   source:
-    uri: git@github.com:edtan/concourse-task-test.git
+    uri: https://github.com/edtan/concourse-task-test.git
     branch: master
 
 jobs:
