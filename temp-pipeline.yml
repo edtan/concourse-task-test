@@ -1,0 +1,13 @@
+resources:
+- name: repo
+  type: git
+  source:
+    uri: git@github.com:edtan/concourse-task-test.git
+    branch: master
+
+jobs:
+- name: test a task
+  plan:
+  - get: repo
+  - task: run-log-parser
+    file: repo/task.yml

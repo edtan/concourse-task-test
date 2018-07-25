@@ -1,0 +1,16 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: { repository: edtan1/docker-redmine-tests, tag: pipenv-alpine }
+
+inputs:
+- name: repo
+
+run:
+  path: sh
+  args:
+    - -exc
+    - |
+      ls repo
