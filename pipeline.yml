@@ -1,0 +1,16 @@
+resources:
+- name: git-repo
+  type: git
+  source:
+    uri: https://github.com/edtan/concourse-task-test.git
+    branch: master
+
+jobs:
+- name: params-test
+  plan:
+  - get: git-repo
+
+  - task: get-docker-image-from-repo-param
+    file: git-repo/task.yml
+    params:
+      REPO: ((repo))
