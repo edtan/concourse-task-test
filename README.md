@@ -1,6 +1,6 @@
 # concourse-task-test
 
-Illustrates issue in Concourse where parameters can't be passed into task files.
+Illustrates [issue #2182](https://github.com/concourse/concourse/issues/2182) in Concourse where parameters can't be passed into task files.
 
 `fly -t local sp -p test -v repo=alpine -c pipeline.yml`
 
